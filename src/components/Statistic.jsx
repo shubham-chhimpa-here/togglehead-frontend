@@ -12,7 +12,7 @@ import {
 export default function Statistic() {
     return (
         <>
-        <Box padding={{base:'1rem', md: '4rem'}} bg={'#ddd'}>
+        <Box padding={{base:'1rem', md: '4rem'}} bg={'#ddd'} color={'blueviolet'}>
 
             <StatGroup gap={'1rem'}>
                 <Stat minW={'120px'}>

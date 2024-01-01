@@ -10,30 +10,38 @@ import './landing.css';
 import { Autoplay, Mousewheel, Pagination } from 'swiper/modules';
 import { useState } from 'react';
 
+import Img1 from '../assets/Img1.jpg';
+import Img2 from '../assets/Img2.jpg';
+import Img3 from '../assets/Img3.jpg';
+import Img4 from '../assets/Img4.jpg';
+
+
 export default () => {
- const total = [1,2,3,4,5,6,7,8,9];
+  const total = [Img1, Img2, Img3, Img4];
   return (
     <>
-    <Swiper
-  loop= 'true'
-      direction={'vertical'}
-      pagination={{
-        clickable: true,
-      }}
+      <Swiper
+        loop='true'
+        direction={'vertical'}
+        pagination={{
+          clickable: true,
+        }}
 
-      autoplay = {{
-        delay: 2500,
-        disableOnInteraction: false
-      }}
-      modules={[Mousewheel, Pagination, Autoplay]}
-      className="mySwiper landing"
-    >
-      {
-        total.map((item) => <SwiperSlide key={item}>Slide {item}</SwiperSlide>)
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false
+        }}
+        modules={[Mousewheel, Pagination, Autoplay]}
+        className="mySwiper landing"
+      >
+        {
+          total.map((item) => <SwiperSlide key={item}>
+            <img src={item} alt={item}/>
+          </SwiperSlide>)
 
-      }
-  
-    </Swiper>
-  </>
+        }
+
+      </Swiper>
+    </>
   );
 };

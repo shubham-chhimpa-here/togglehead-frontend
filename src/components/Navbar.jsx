@@ -13,7 +13,7 @@ export default function NavbarComponent() {
   return (
 
 
-    <Flex padding={'1rem'}  bg={'blueviolet'} justify={'space-between'} alignItems={'center'} pos={'sticky'} zIndex={'1000'} top={0} color={'white'}>
+    <Flex padding={{base:'.3rem', md:'1rem'}}  bg={'blueviolet'} justify={'space-between'} alignItems={'center'} pos={'sticky'} zIndex={'1000'} top={0} color={'white'}>
       <Heading fontSize={'2rem'}>Logo</Heading>
       <Flex justify={'space-between'} alignItems={'center'} gap={'1rem'} display={{ lg: 'flex', base: 'none' }}>
         {
@@ -31,7 +31,7 @@ export default function NavbarComponent() {
       </Flex>
 
       <Box display={{ lg: 'none' }}>
-        <NavDrawer />
+        <NavDrawer navItems={navItems}/>
       </Box>
     </Flex>
 

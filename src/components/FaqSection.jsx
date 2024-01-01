@@ -18,7 +18,7 @@ export default function FaqSection() {
     ]
     return (
         <>
-            <Box padding={{base:'.5rem', md: '4rem'}}>
+            <Box padding={{base:'.5rem', md: '4rem'}} color={'blueviolet'}>
                 <Heading textAlign={'center'} paddingBottom={'2rem'}>FAQ</Heading>
                 <Accordion allowToggle>
                   {
